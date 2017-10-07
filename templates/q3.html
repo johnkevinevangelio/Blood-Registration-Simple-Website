@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>questionnaire</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="{{ url_for('static', filename='questionnaire/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='questionnaire/css/font-awesome.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='questionnaire/css/form-elements.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='questionnaire/css/style.css') }}">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+
+
+
+	</head>
+
+    <body>
+
+		
+
+		<!-- Top menu -->
+		<nav class="navbar navbar-inverse navbar-no-bg" role="navigation" class="main">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="questionnaire.html">Blood Donation</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="top-navbar-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<span class="li-social">
+								<a href="#"><i class="fa fa-home"></i></a> 
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+        <!-- Top content -->
+        <div class="top-content" id="mainNav">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            
+                            <div class="description">
+                            	
+									<h1><strong></strong>Registration Form</h1>
+									Please make sure that you complete all required sections carefully and honestly.
+									<div class="alert alert-warning" role="alert">
+										  <strong>Warning!</strong> PLEASE DO NOT DONATE BLOOD IF YOU MAY HAVE BEEN EXPOSED TO HIV/AIDS.
+										  
+										  
+									</div>
+									
+								<p>You may be endangering someone's life. Never donate blood for personal health screening purposes.</p>
+                            	
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	
+                        	<form role="form" action="/q3" method="POST" class="registration-form">
+                        		
+                        		
+			                    <fieldset>
+		                        	<div class="form-top">
+		                        		<div class="form-top-left">
+		                            		<p>DECLARATION: Please read and sign before donating blood.</p>
+		                        		</div>	
+		                            </div>
+		                            <div class="form-bottom">
+				                    	1. I have read and understood the pamphlet “Important Information for Blood Donors”
+										<p>2. To the best of my knowledge all the information supplied is the truth.</p>
+										<p>	3. I understand that if I have not answered these questions truthfully this could endanger the patient and lead to legal proceedings against me.
+										 I undertake that should I for any reason deem my blood not safe for use, I will immediately inform WPBTS.</p>
+										<p>	4. I consent to my blood being tested for Syphilis, Hepatitis B, Hepatitis C and HIV.</p>
+										<p>	5. I understand that I will be informed of any test results that are important to my health or affect my ability to donate blood.</p>
+										<p>	6. I accept that samples of my blood and/or donation data may be used on occasion for scientific research, the objective of which is to	 	
+										improve the safety of the blood supply to patient and donor health and well-being. On occasion the Service may permit researchers
+										to request additional samples from me with my consent.</p>
+										<p>	7.	 I confirm that I am 16 years of age or older.</p>
+										<p>	8.	 I understand that the information on this form will be kept in a secure facility indefinitely under my donor code, not my name.</p>
+										<p>	9. I understand the donation process and the possible risks involved as explained.</p>
+										<p>	10.	I consent to the administration of such fluids and medications as deemed necessary in the management of an untoward donor reaction.</p>
+										<p>	11.	I consent to the infusion of fluids, medications and re-infusion of my own blood components during apheresis collection procedures.</p>
+										<p>	12. I consent to being offered information on the Service’s Iron Replacement Programme and that any decision to take the iron replacement
+										tablets rests with me.</p>
+									
+
+										<a type="button" class="btn btn-previous" href="/r3">Previous</a>
+																
+				                        <button type="submit" class="btn" onclick="clickAlert()">Sign me up!</button>
+				                    </div>
+			                    </fieldset>
+		                    
+		                    </form>
+		                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <!-- Javascript -->
+        <script src="{{ url_for('static', filename='questionnaire/js/jquery-1.11.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='questionnaire/js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='questionnaire/js/jquery.backstretch.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='questionnaire/js/retina-1.1.0.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='questionnaire/js/scripts.js') }}"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>

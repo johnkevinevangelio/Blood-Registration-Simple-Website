@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+	<meta name="author" content="">
+	
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='cert/styles.css') }}"> -->
+
+<style>
+
+.bg {
+
+        text-align:center;
+        background:url( "C:\Users\JOHN KEVIN\Desktop\SAD\static\images\1234.jpg" ) no-repeat bottom center scroll;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+        background-size:cover;
+}
+
+
+
+h1{
+	font-family: Edwardian Script ITC;
+	font-size: 100px;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+	text-align: center;
+}
+
+
+h2{
+	text-align: center;
+	font-family: Edwardian Script ITC;
+	font-size: 50px;
+	color: red;
+	
+}
+
+p{
+	font-family: Century Gothic;
+	text-align: center;
+}
+
+table tr, td{
+	text-align: center:
+}
+
+
+
+
+</style>
+
+
+
+</head>
+
+
+
+
+
+<body>
+<div class="bg">
+<h1>Certificate of Appreciation</h1>
+<p>Presented to</p>
+
+{% for a, b in posts %}
+<p>{{ a }} {{ b }}</p>
+{% endfor %}
+<p>For giving voluntary blood donation at</p>
+
+
+<h2>Community Blood Donation Camp</h2>
+
+<p >On  day of <p id="date"></p>,</p> <br>
+<script>
+ var n =  new Date();
+ var y = n.getFullYear();
+ var m = n.getMonth() + 1;
+ var d = n.getDate();
+document.getElementById("date").innerHTML = m + "/" + d + "/" + y;
+</script>
+<p>We thank you for your contribution towards the noble cause.</p>
+
+<br><br>
+
+<center>
+
+<div class = "sign">
+<table width="50%">
+<tr>
+<th>admin</th>
+</tr>
+<tr>
+<th>Signature</th>
+</tr>
+
+</center>
+</div>
+
+</body>
+</html>
